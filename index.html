@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zack's Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <main class="calculator-container">
+        <div class="calc-wrapper">
+            <div class="calc-display">
+                <div class="prev-operation" id="previousDisplay"></div>
+                <div class="current-operation" id="currentDisplay">0</div>
+            </div>
+            <div class="calc-buttons">
+                <button
+                    class="btn btn-clear double-width"
+                    id="clearButton"
+                    onclick="this.blur();"
+                >
+                    Clear
+                </button>
+                <button
+                    class="btn btn-delete double-width"
+                    id="deleteButton"
+                    onclick="this.blur();"
+                >
+                    Delete
+                </button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>7</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>8</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>9</button>
+                <button class="btn operator-btn" onclick="this.blur();" data-operator>÷</button>
+
+                <button class="btn number-btn" onclick="this.blur();" data-digit>4</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>5</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>6</button>
+                <button class="btn operator-btn" onclick="this.blur();" data-operator>×</button>
+
+                <button class="btn number-btn" onclick="this.blur();" data-digit>1</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>2</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>3</button>
+                <button class="btn operator-btn" onclick="this.blur();" data-operator>−</button>
+
+                <button class="btn number-btn" onclick="this.blur();" id="decimalButton">.</button>
+                <button class="btn number-btn" onclick="this.blur();" data-digit>0</button>
+                <button class="btn equals-btn" onclick="this.blur();" id="calculateButton">=</button>
+                <button class="btn operator-btn" onclick="this.blur();" data-operator>+</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            © <span id="year"></span> ZackCornfield. All Rights Reserved.
+        </p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

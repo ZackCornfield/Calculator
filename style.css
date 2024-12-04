@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Replace with any other font if needed */
+    background: linear-gradient(135deg, #00aaff, #001f3f);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Heading */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}   
+
+/* Calculator Container */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.349);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper and Display */
+.calc-wrapper {
+    width: 100%;
+}
+
+.calc-display {
+    background: #222;
+    color: #ffffff;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prev-operation {
+    font-size: 0.9rem;
+    color: #888;
+    height: 20px;
+}
+
+.current-operation {
+    font-size: 2rem;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Buttons */
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.double-width {
+    grid-column: span 2;
+}
+
+.btn {
+    background: #444;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background: #333;
+    transform: scale(0.95);
+}
+
+/* Special Buttons */
+.btn-clear {
+    background: #ff6f61;
+}
+
+.btn-clear:hover {
+    background: #ff5a4f;
+}
+
+.btn-delete {
+    background: #ffca28;
+    color: #222;
+}
+
+.btn-delete:hover {
+    background: #e6b624;
+}
+
+.equals-btn {
+    background: #4caf50;
+}
+
+.equals-btn:hover {
+    background: #43a047;
+}
+
+.operator-btn {
+    background: #3f51b5;
+}
+
+.operator-btn:hover {
+    background: #394aae;
+}
+
+/* Number Buttons */
+.number-btn {
+    background: #555;
+}
+
+.number-btn:hover {
+    background: #666;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+footer span {
+    color: #fff;
+}
